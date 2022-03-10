@@ -11,47 +11,33 @@
 10. Footer
 */
 
-
 .page {
   min-width: 1100px;
   max-width: 1600px;
   margin: 0 auto;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-/* div, td { border: 1px solid red; } */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /* Helpers =====================================*/
-.span-accent { font-weight: 700; }
+/* div, li, h3, h2 { border: 1px solid red; } */
 
-.centered {
-  margin-right: auto;
-  margin-left: auto;
+.span-accent {
+  font-weight: 700;
 }
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-}
-
-.sec-top { margin-top: 100px; }
-.sec-bot { margin-bottom: 100px; }
-.p-bottom { margin-bottom: 30px; }
-
 
 /* Logo ========================================*/
 .logo {
   width: 183px;
-  height: 32px;
 }
 
 .logo_place_header {
+  height: 32px;
   position: absolute;
   top: 30px;
   left: 64px;
@@ -60,12 +46,14 @@ h6 {
 }
 
 .logo_place_footer {
+  height: 35px;
   background: url(../images/logo_place_footer.svg) no-repeat center / cover;
 }
 
-
 /* Header ======================================*/
 .header {
+  margin-bottom: 100px;
+
   display: flex;
   align-items: center;
   height: 100vh;
@@ -88,7 +76,8 @@ h6 {
 }
 
 .header__subtitle {
-  display: block;
+  /* display: block; */
+  margin: 0;
   position: absolute;
   bottom: 34px;
   left: 64px;
@@ -98,6 +87,7 @@ h6 {
 
   font-size: 18px;
   line-height: 25px;
+  font-weight: 400;
 }
 
 .header__link {
@@ -133,9 +123,10 @@ h6 {
   background-color: #2f80ed;
 }
 
-
 /* Description =================================*/
 .description {
+  margin-bottom: 100px;
+
   width: 80%;
 }
 
@@ -145,6 +136,7 @@ h6 {
 }
 
 .two-columns__brief {
+  margin: 0;
   width: 175px;
 
   font-size: 18px;
@@ -162,25 +154,32 @@ h6 {
   font-weight: 400;
 }
 
+.two-columns__paragraph {
+  margin: 0 0 30px;
+}
+
+.two-columns__paragraph:last-of-type {
+  margin: 0;
+}
 
 /* Section =====================================*/
-.section__title {
-  margin-bottom: 20px;
+.section-title {
+  margin: 0 0 20px;
   width: 60%;
   z-index: 2;
 
   text-align: center;
-  font-size: 64px;
+  font-size: 60px;
+  font-weight: 700;
   line-height: 1.15;
 }
 
-.section__title_theme_dark {
-  font-size: 60px;
-  font-weight: 700;
+.section-title_theme_dark {
   color: #fff;
 }
 
-.section__subtitle {
+.section-subtitle {
+  margin: 0;
   width: 60%;
   z-index: 2;
 
@@ -190,68 +189,78 @@ h6 {
   font-weight: 400;
 }
 
-.section__subtitle_theme_dark {
+.section-subtitle_theme_dark {
   color: #fff;
 }
 
-
 /* Digits ======================================*/
 .digits {
+  margin-bottom: 100px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 
 /* Table =======================================*/
 .table {
   width: 1100px;
 }
 
-.table_kaufman {
+.table_theme_dark {
   z-index: 2;
 }
 
 .table__row {
   display: flex;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.table__cell_theme_light {
+.table__cell {
   width: 250px;
   margin-top: 60px;
 }
 
 .table__cell_theme_dark {
   width: 200px;
-  color: white;
   margin-top: 80px;
 }
 
 .table__heading {
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 
   font-size: 24px;
   line-height: 1.15;
   font-weight: 700;
 }
 
+.table__heading_theme_dark {
+  color: #fff;
+}
+
 .table__text {
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 
   font-size: 18px;
   line-height: 1.2;
   font-weight: 400;
 }
 
-.table__text:last-child {
-  margin-bottom: 0;
+.table__text_theme_dark {
+  color: #fff;
 }
 
+.table__text:last-of-type {
+  margin: 0;
+}
 
 /* Feynman =====================================*/
 .feynman {
   position: relative;
+  width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -261,7 +270,7 @@ h6 {
 }
 
 .feynman__title {
-  margin-top: 100px;
+  margin: 100px 0 70px;
   width: 648px;
 
   font-size: 120px;
@@ -270,7 +279,7 @@ h6 {
 }
 
 .feynman__subtitle {
-  margin-top: 70px;
+  margin: 0;
 
   font-size: 36px;
   line-height: 51px;
@@ -284,7 +293,7 @@ h6 {
   right: 48px;
 
   font-size: 36px;
-  line-height:  51px;
+  line-height: 51px;
   font-weight: 400;
   color: #2f80ed;
   text-decoration: none;
@@ -294,12 +303,12 @@ h6 {
   text-decoration: underline;
 }
 
-
 /* Kayfman =====================================*/
 .kaufman {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 
   position: relative;
   overflow: hidden;
@@ -317,7 +326,6 @@ h6 {
   background: url(../images/kaufman-triangle.svg) no-repeat center / cover;
 }
 
-
 /* Footer ======================================*/
 .footer {
   display: flex;
@@ -334,12 +342,8 @@ h6 {
   min-height: 350px;
 }
 
-.footer__author {
-  margin: 18px 0;
-
-  line-height: 25px;
-  font-size: 18px;
-  font-weight: 400;
+.footer__column {
+  /* обязательно */
 }
 
 .footer__column_content_copyright {
@@ -349,16 +353,34 @@ h6 {
   justify-content: space-between;
 }
 
+.footer__column_content_info {
+  /* обязательно */
+}
+
+.footer__column_content_social {
+  /* обязательно */
+}
+
+.footer__author {
+  /* margin: 18px 0; */
+
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
 .footer__column-heading {
+  margin: 0 0 20px;
   line-height: 30px;
   font-size: 18px;
   font-weight: 700;
 }
 
 .footer__column-links {
+  margin: 0 0 16px;
+
   list-style: none;
   padding: 0;
-  margin-top: 20px;
 
   line-height: 30px;
   font-size: 18px;
@@ -375,5 +397,5 @@ h6 {
 }
 
 .footer__social-icon {
-  margin-right: 5px;
+  margin-right: 10px;
 }
