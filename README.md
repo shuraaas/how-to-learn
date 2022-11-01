@@ -16,7 +16,7 @@
 
 ## Посмотреть страницу:
 
-[Проект на Github Pages](https://shuraaas.github.io/mesto/index.html)
+[Проект на Github Pages](https://shuraaas.github.io/how-to-learn/index.html)
 
 ## Что можно улучшить:
 
